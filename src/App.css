@@ -1,0 +1,362 @@
+body {
+  background-color: black;
+}
+
+#root {
+  max-width: 200px;
+  max-height: 200px;
+  overflow: hidden;
+  margin: auto;
+  background-image: url(bg.jpg);
+  background-size: contain;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(4);
+}
+
+.gameArea {
+  margin: 0 auto;
+  background-color: azure;
+  position: relative;
+  transition: .25s;
+}
+
+.conversation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: white;
+  font-size: 6px;
+  z-index: 1000;
+  line-height: 1;
+  padding: 5px;
+  transition: .25s;
+}
+
+.gameArea:after {
+  height: 100%;
+  width: 100%;
+  min-width: 100%;
+  content: '';
+  display: block;
+  background-image: url(forest.jpg);
+  background-size: 50px;
+}
+
+.hero {
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  background-image: url(img.png);
+  background-size: 120px;
+}
+
+.hero.down {
+  background-position: 0 0;
+}
+
+.hero.up {
+  background-position: 0 -30px;
+}
+
+.hero.right {
+  background-position: 0 -20px;
+}
+
+.hero.left {
+  background-position: 0 -10px;
+}
+
+.person1 {
+  height: 10px;
+  width: 10px;
+  background-size: 115px;
+  position: absolute;
+  background-image: url(img.png);
+  background-position: 86px 0px;
+}
+
+.person2 {
+  height: 10px;
+  width: 10px;
+  background-size: 115px;
+  position: absolute;
+  background-image: url(img.png);
+  background-position: 29px 0px;
+}
+
+.person1.down{
+  background-position: 86px -29px;
+}
+
+.person2.down {
+  background-position: 29px -29px;
+}
+
+.person1.top {
+  background-position: 86px 0px;
+}
+
+.person2.top {
+  background-position: 29px 0px;
+}
+
+.person1.left{
+  background-position: 86px -20px;
+}
+
+.person2.left {
+  background-position: 29px -20px;
+}
+
+.person1.right{
+  background-position: 86px -10px;
+}
+
+.person2.right {
+  background-position: 29px -10px;
+}
+
+.bush1left,
+.bush2left,
+.bush3left,
+.bush4left,
+.bush1middle,
+.bush2middle,
+.bush3middle,
+.bush4middle,
+.treeA,
+.treeB,
+.treeC,
+.treeD,
+.treeE,
+.treeF,
+.tree1,
+.tree2,
+.brokenTree,
+.bush1,
+.bush2,
+.bush3,
+.bush4,
+.bush5,
+.rocks,
+.wood {
+  height: 10px;
+  width: 10px;
+  background-size: 85px;
+  position: absolute;
+  background-image: url(tree.png);
+}
+
+.wood {
+  background-position: -2px -74px;
+}
+
+.treeA {
+  background-position: -1px 3px;
+  background-size: 90px;
+  background-repeat: no-repeat;
+}
+
+.treeB {
+  background-position: -1px -7px;
+  background-size: 90px;
+}
+
+.treeC {
+  background-position: -12px 3px;
+  background-size: 90px;
+  background-repeat: no-repeat;
+}
+
+.treeD {
+  background-position: -12px -7px;
+  background-size: 90px;
+}
+
+.treeE {
+  background-position: -23px 3px;
+  background-size: 90px;
+  background-repeat: no-repeat;
+}
+
+.treeF {
+  background-position: -23px -7px;
+  background-size: 90px;
+}
+
+.rocks {
+  background-position: 0px -60px;
+  background-size: 95px;
+}
+
+.bush1left {
+  background-position: 20px 37px;
+}
+
+.bush2left {
+  background-position: 20px 27px;
+}
+
+.bush3left {
+  background-position: 20px 17px;
+}
+
+.bush4left {
+  background-position: 20px 7px;
+}
+
+.bush1 {
+  background-position: 10px 37px;
+}
+
+.bush2 {
+  background-position: 10px 27px;
+}
+
+.bush3 {
+  background-position: 10px 17px;
+}
+
+.bush4 {
+  background-position: 10px 7px;
+}
+
+.brokenTree {
+  background-position: -1px -64px;
+}
+
+.bush5 {
+  background-position: -30px -60px;
+  background-size: 80px;
+}
+
+.heroUp {
+  animation: .25s heroUp 1 step-end;
+  transition: .25s;
+}
+
+@keyframes heroUp {
+  0% {
+    background-position: 0 -30px;
+  }
+
+  30% {
+    background-position: -10px -30px;
+  }
+
+  60% {
+    background-position: -20px -30px;
+  }
+
+  100% {
+    background-position: 0 -30px;
+  }
+}
+
+
+.heroLeft {
+  animation: .25s heroLeft 1 step-end;
+  transition: .25s;
+}
+
+@keyframes heroLeft {
+  0% {
+    background-position: 0 -10px;
+  }
+
+  30% {
+    background-position: -10px -10px;
+  }
+
+  60% {
+    background-position: -20px -10px;
+  }
+
+  100% {
+    background-position: 0 -10px;
+  }
+}
+
+
+.heroRight {
+  animation: .25s heroRight 1 step-end;
+  transition: .25s;
+}
+
+@keyframes heroRight {
+  0% {
+    background-position: 0 -20px;
+  }
+
+  30% {
+    background-position: -10px -20px;
+  }
+
+  60% {
+    background-position: -20px -20px;
+  }
+
+  100% {
+    background-position: 0 -20px;
+  }
+}
+
+.heroDown {
+    animation: .25s heroDown 1 step-end;
+    transition: .25s;
+  }
+  
+  @keyframes heroDown {
+    0% {
+      background-position: 0 0;
+    }
+
+    30% {
+      background-position: -10px 0;
+    }
+  
+    60% {
+      background-position: -20px 0;
+    }
+
+    100% {
+      background-position: 0 0;
+    }
+  }
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
