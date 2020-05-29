@@ -7,4 +7,4 @@ Created from zero, there's collision management and simple talking NPC to intera
 
 Needs some refactor, but the idea is there.
 
-Curious how it looks? Check the [demo website](https://suspicious-yalow-a7e0d7.netlify.app/) 
+Curious how it looks? Check the [demo website](https://react-game-rpg.netlify.app/) 
